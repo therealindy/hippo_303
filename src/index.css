@@ -1,0 +1,41 @@
+/* กำหนดสีพื้นหลัง */
+body {
+  background-color: #222;
+  color: #fff;
+}
+
+/* สร้าง container เพื่อบรรจุองค์ประกอบทั้งหมด */
+.container {
+  display: flex;
+  flex-direction: column; /* จัดวางองค์ประกอบเป็นแนวตั้ง */
+  align-items: center; /* จัดวางองค์ประกอบตามแนวแกนรอง (แนวนอน) ให้ตรงกลาง */
+  height: 100vh; /* ให้ container สูงเท่าหน้าจอ */
+}
+
+.options {
+  display: flex; /* ทำให้ตัวเลือกเป็น flex container */
+  justify-content: space-around; /* จัดวางตัวเลือกให้ห่างกันเท่าๆ กัน */
+}
+
+/* สไตล์สำหรับหัวข้อ */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+h2{
+  text-align: center;
+}
+
+/* สร้าง grid container สำหรับรูปภาพ */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* สร้าง grid ที่มีคอลัมน์ปรับเปลี่ยนได้ตามขนาดหน้าจอ */
+  gap: 20px; /* ระยะห่างระหว่างรูปภาพ */
+}
+
+/* สไตล์สำหรับรูปภาพ */
+.image-grid img {
+  width: 100%; /* ให้รูปภาพเต็มความกว้างของช่อง */
+  height: auto;
+}
